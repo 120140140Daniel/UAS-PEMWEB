@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mahasiswa</title>
+</head>
+<body>
+    <h1>Data Mahasiswa</h1>
+
+    <form id="dataForm" method="post" action="process.php">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required>
+        <br>
+
+        <label for="usia">Usia:</label>
+        <input type="number" id="usia" name="usia" required>
+        <br>
+
+        <label for="jenisKelamin">Jenis Kelamin:</label>
+        <input type="radio" id="pria" name="jenisKelamin" value="pria" checked>
+        <label for="pria">Pria</label>
+        <input type="radio" id="wanita" name="jenisKelamin" value="wanita">
+        <label for="wanita">Wanita</label>
+        <br>
+
+        <label for="hobi">Hobi:</label>
+        <input type="checkbox" id="membaca" name="hobi[]" value="membaca">
+        <label for="membaca">Membaca</label>
+        <input type="checkbox" id="berenang" name="hobi[]" value="berenang">
+        <label for="berenang">Berenang</label>
+        <br>
+
+        <button type="submit">Tambah Data</button>
+    </form>
+
+    <h2>Daftar Mahasiswa</h2>
+    <table id="dataTable" border="1">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Usia</th>
+                <th>Jenis Kelamin</th>
+                <th>Hobi</th>
+            </tr>
+        </thead>
+        <tbody id="dataBody"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
